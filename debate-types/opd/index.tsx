@@ -28,7 +28,8 @@ export class Opd implements DebateInterface {
         for (let i: number = 1; i <= nonAlignedSpeakersCount; i++){
             nonAlignedProcedure.push({
                 "title": `${i}${numberSuffix(i)} Non-Aligned Speaker`,
-                "seconds": 210
+                "seconds": 210,
+                "actions": []
             })
         }
 

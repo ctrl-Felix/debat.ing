@@ -1,19 +1,28 @@
 import {Stack} from "expo-router";
 import * as React from "react";
+import {Button} from "react-native-paper";
 
 export default function DebateLayout() {
     return (
         <Stack
             screenOptions={{
+
             }}>
             <Stack.Screen name="[code]" options={{
-                headerShown: false
+                headerShown: true,
+                title: "Configure Debate",
+                headerBackButtonMenuEnabled: true,
+                headerBackVisible: true,
+                headerBackTitle: "Back"
             }} />
-            <Stack.Screen name="selector" options={{
-                headerShown: false
+            <Stack.Screen name="index" options={{
+                headerShown: true,
+                headerTitle: "Select Debate Style"
             }} />
             <Stack.Screen name="execute" options={{
-                headerShown: false
+                headerTitle: "Debate",
+                headerBackTitle: "Back",
+                headerShown: true
             }} />
         </Stack>
 

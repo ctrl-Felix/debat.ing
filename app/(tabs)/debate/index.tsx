@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native';
 import DebateSelector from "@/components/DebateSelector";
 
-export default function Selector() {
+export default function Index() {
     return (
         <View style={styles.container}>
             <DebateSelector/>

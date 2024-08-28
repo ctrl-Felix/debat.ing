@@ -1,4 +1,12 @@
-import {DebateConfiguration} from "@/debate-types/interfaces";
+import {DebateAction, DebateConfiguration} from "@/debate-types/interfaces";
+
+const defaultSpeakerActions: Array<DebateAction> = [
+    {
+        after: 60,
+        ring: 'single',
+        mode: "danger"
+    }
+]
 
 const config: DebateConfiguration = {
     "title": "British Parliamentary",
@@ -7,35 +15,43 @@ const config: DebateConfiguration = {
     "procedure": [
         {
             "title": "Prime Minister",
-            "seconds": 420
+            "seconds": 420,
+            "actions": defaultSpeakerActions
         },
         {
             "title": "Leader of the Opposition",
-            "seconds": 420
+            "seconds": 420,
+            "actions": defaultSpeakerActions
         },
         {
             "title": "Deputy Prime Minister",
-            "seconds": 420
+            "seconds": 420,
+            "actions": defaultSpeakerActions
         },
         {
             "title": "Deputy Leader of the Opposition",
-            "seconds": 420
+            "seconds": 420,
+            "actions": defaultSpeakerActions
         },
         {
             "title": "Member of Government",
-            "seconds": 420
+            "seconds": 420,
+            "actions": defaultSpeakerActions
         },
         {
             "title": "Member of Opposition",
-            "seconds": 420
+            "seconds": 420,
+            "actions": defaultSpeakerActions
         },
         {
             "title": "Government Whip",
-            "seconds": 420
+            "seconds": 420,
+            "actions": defaultSpeakerActions
         },
         {
             "title": "Opposition Whip",
-            "seconds": 420
+            "seconds": 420,
+            "actions": defaultSpeakerActions
         }
     ],
     "variables": []

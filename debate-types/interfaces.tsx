@@ -23,6 +23,13 @@ interface DebateVariable {
 export interface DebateProcedure {
     title: string
     seconds: Number
+    actions: Array<DebateAction>
+}
+
+export interface DebateAction {
+    ring: null | 'single' | 'double'
+    after: number
+    mode: 'alert' | 'danger' | 'warning' | 'safe' | 'default'
 }
 
 export interface ParsedDebateVariables {

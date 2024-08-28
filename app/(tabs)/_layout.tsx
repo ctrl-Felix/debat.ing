@@ -1,6 +1,7 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 import DebateLayout from "@/app/(tabs)/debate/_layout";
+import {HeaderBackButton} from "@react-navigation/elements";
 
 export default function TabLayout() {
     return (
@@ -10,8 +11,9 @@ export default function TabLayout() {
                 name="debate"
 
                 options={{
-                    href: "/debate/selector",
+                    href: "/debate",
                     title: 'Debate',
+                    headerShown: false,
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
                 }}
             />
