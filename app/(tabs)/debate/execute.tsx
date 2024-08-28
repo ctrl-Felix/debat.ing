@@ -91,8 +91,8 @@ export default function Execute() {
         if (currentProcedure && nextAction){
             let action_timestamp = currentProcedure["seconds"] - nextAction["after"]
             if (remainingSeconds <= action_timestamp){
-                if( nextAction["ring"] !== null ){
-                    playRing(nextAction["ring"] === 'single' ? 1 : 2)
+                if( nextAction["ring"] > 0 ){
+                    playRing(nextAction["ring"])
                 }
                 if (nextAction["mode"]){
                     setMode(nextAction["mode"])
@@ -122,6 +122,7 @@ export default function Execute() {
 
         if (!currentProcedure){
             setNextActionId(0)
+            return;
         }
         // @ts-ignore
         for (let i = 0; i < currentProcedure["actions"].length; i++ ){
@@ -180,13 +181,13 @@ export default function Execute() {
             </View>
             <View style={styles.control_view}>
                 <Button style={styles.control_button} mode={"outlined"}
-                        disabled={currentProcedureId <= 0}
+                        disabled={currentProcedureId <= 0 || running}
                         onPress={() => {
                             setCurrentProcedureId(currentProcedureId - 1)
                 }}>Previous</Button>
                 <Button style={styles.control_button} mode={"contained"} onPress={() => setRunning(!running)}>{running ? "Stop" : "Start"}</Button>
                 <Button style={styles.control_button} mode={"outlined"}
-                        disabled={currentProcedureId + 1 >= procedure.length }
+                        disabled={currentProcedureId + 1 >= procedure.length || running }
                         onPress={() => {
                             setCurrentProcedureId(currentProcedureId + 1)
                 }}>Next</Button>

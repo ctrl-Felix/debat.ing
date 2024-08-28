@@ -27,7 +27,7 @@ export interface DebateProcedure {
 }
 
 export interface DebateAction {
-    ring: null | 'single' | 'double'
+    ring: number
     after: number
     mode: 'alert' | 'danger' | 'warning' | 'safe' | 'default'
 }

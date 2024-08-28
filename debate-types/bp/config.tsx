@@ -3,7 +3,7 @@ import {DebateAction, DebateConfiguration} from "@/debate-types/interfaces";
 const defaultSpeakerActions: Array<DebateAction> = [
     {
         after: 60,
-        ring: 'single',
+        ring: 1,
         mode: "danger"
     }
 ]

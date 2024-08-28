@@ -53,7 +53,7 @@ export default function Route() {
                     style={styles.input}
                     label={variable.title}
                     // @ts-ignore
-                    value={variables[variable.code] !== 0 ? variables[variable.code] : "0"}
+                    value={variables[variable.code] !== 0 ? String(variables[variable.code]) : "0"}
                     onChangeText={n => {
                         let newValue = convert(n, variable.type)
                         if (newValue !== null) {

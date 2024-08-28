@@ -10,6 +10,6 @@ interface DebateTypes {
 }
 export const debateTypes: DebateTypes = {
     opd: Opd,
-    bp: Bp
+    bp: Bp,
 }
 
