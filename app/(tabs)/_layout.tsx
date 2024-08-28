@@ -11,7 +11,7 @@ export default function TabLayout() {
 
                 options={{
                     href: "/debate/selector",
-                    title: 'Selector',
+                    title: 'Debate',
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
                 }}
             />
@@ -20,6 +20,12 @@ export default function TabLayout() {
                 options={{
                     title: 'Settings',
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+                }}
+            />
+            <Tabs.Screen
+                name="index"
+                options={{
+                    href: null
                 }}
             />
         </Tabs>

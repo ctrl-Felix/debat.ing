@@ -6,10 +6,13 @@ export default function DebateLayout() {
         <Stack
             screenOptions={{
             }}>
-            <Stack.Screen name="debate" options={{
+            <Stack.Screen name="[code]" options={{
                 headerShown: false
             }} />
             <Stack.Screen name="selector" options={{
+                headerShown: false
+            }} />
+            <Stack.Screen name="execute" options={{
                 headerShown: false
             }} />
         </Stack>

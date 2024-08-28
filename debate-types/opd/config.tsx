@@ -35,7 +35,8 @@ const config: DebateConfiguration = {
             "title": "Non-Aligned speakers count",
             "code": "nasc",
             "description": "",
-            "type": "string"
+            "type": "number",
+            "default": 3
 
         }
     ]

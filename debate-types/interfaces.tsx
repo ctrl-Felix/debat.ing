@@ -17,6 +17,7 @@ interface DebateVariable {
     code: string
     description: string
     type: 'string' | 'number' | 'boolean'
+    default: number | string | boolean
 }
 
 export interface DebateProcedure {

@@ -2,6 +2,7 @@ import * as React from "react";
 import { Card, Button } from 'react-native-paper';
 import {View, StyleSheet} from "react-native";
 import {debateTypes} from "@/debate-types/types";
+import {router} from "expo-router";
 
 export default function DebateSelector() {
     return (
@@ -17,7 +18,11 @@ export default function DebateSelector() {
                             right={(props) =>
                                 <View style={styles.buttonContainer}>
                                     <Button mode={"outlined"}>Edit</Button>
-                                    <Button mode={"contained"}>Start</Button>
+                                    <Button mode={"contained"} onPress={() => {
+                                        let path = "/debate/" + debateInstance.config.code
+                                        // @ts-ignore
+                                        router.replace(path)
+                                    }}>Start</Button>
                                 </View>}
                         />
                         </Card>
